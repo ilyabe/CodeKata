@@ -19,6 +19,12 @@ public class Utils {
         return instance;
     }
 
+    /**
+     * Removes the package name from the Class Name
+     *
+     * @param packageQualifiedClass String package qualified class name
+     * @return String class name without package qualifier
+     */
     public String getClassNameString(String packageQualifiedClass) {
         return packageQualifiedClass.substring(packageQualifiedClass.lastIndexOf('.') + 1);
     }
