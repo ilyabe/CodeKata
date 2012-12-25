@@ -57,4 +57,8 @@ public class ChopIterativeImpl implements Chop {
     private int calculateMidpoint(int min, int max) {
         return min + ((max - min) / 2);
     }
+
+    public String toString() {
+        return "ChopIterativeImpl";
+    }
 }

@@ -1,5 +1,7 @@
 package com.ilyaberns.kata.two.karatechop;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ilya
@@ -10,5 +12,18 @@ public class ChopFactory {
 
     public static Chop makeIterativeChop() {
         return new ChopIterativeImpl();
+    }
+
+    public static Chop makeRecursiveChop() {
+        return new ChopRecursiveImpl();
+    }
+
+    public static ArrayList<Chop> makeAllChops() {
+        ArrayList<Chop> allChops = new ArrayList<Chop>();
+
+        allChops.add(ChopFactory.makeIterativeChop());
+        allChops.add(ChopFactory.makeRecursiveChop());
+
+        return allChops;
     }
 }
