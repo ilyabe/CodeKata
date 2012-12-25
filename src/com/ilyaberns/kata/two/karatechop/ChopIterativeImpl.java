@@ -32,6 +32,7 @@ public class ChopIterativeImpl implements Chop {
      */
     public int chop(int searchTarget, int[] sortedArrayOfInt, int minIndex, int maxIndex) {
 
+        // Return not found for empty arrays
         if (sortedArrayOfInt.length == 0)
             return Constants.NOT_FOUND;
 
