@@ -14,6 +14,8 @@ import com.ilyaberns.utils.Utils;
  *
  * 1. Errors encountered:
  *      - Calculating midpoint incorrectly by forgetting that min is not always 0, which can cause an infinite loop
+ *      - Based minIndex, maxIndex on array size. Can't do that for recursive version
+ *      - ArrayIndexOutOfBoundsException when passing an empty array
  * 2. Merits:
  *      - Straight-forward, well documented
  */
@@ -26,9 +28,10 @@ public class ChopIterativeImpl implements Chop {
      * @param sortedArrayOfInt int array to search
      * @return int index of the searchTarget or -1 if not found
      */
-    public int chop(int searchTarget, int[] sortedArrayOfInt) {
-        int minIndex = 0;
-        int maxIndex = sortedArrayOfInt.length - 1;
+    public int chop(int searchTarget, int[] sortedArrayOfInt, int minIndex, int maxIndex) {
+
+        if (sortedArrayOfInt.length == 0)
+            return Constants.NOT_FOUND;
 
         // Continue searching while [minIndex,maxIndex] is not empty
         while (maxIndex >= minIndex) {

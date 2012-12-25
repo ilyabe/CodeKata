@@ -12,5 +12,5 @@ package com.ilyaberns.kata.two.karatechop;
  */
 public interface Chop {
 
-    int chop(int searchTarget, int[] sortedArrayOfInt);
+    int chop(int searchTarget, int[] sortedArrayOfInt, int minIndex, int maxIndex);
 }
