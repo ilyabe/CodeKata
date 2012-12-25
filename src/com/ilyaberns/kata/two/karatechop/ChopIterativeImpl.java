@@ -26,6 +26,8 @@ public class ChopIterativeImpl implements Chop {
      *
      * @param searchTarget int to find
      * @param sortedArrayOfInt int array to search
+     * @param minIndex int lower bound to search
+     * @param maxIndex int upper bound to search
      * @return int index of the searchTarget or -1 if not found
      */
     public int chop(int searchTarget, int[] sortedArrayOfInt, int minIndex, int maxIndex) {
