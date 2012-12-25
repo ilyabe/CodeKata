@@ -13,6 +13,8 @@ import static junit.framework.Assert.assertEquals;
  * User: ilya
  * Date: 12/21/12
  * Time: 1:50 AM
+ *
+ * Tests all of the Karate Chop implementations
  */
 public class ChopTest {
 
