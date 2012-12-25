@@ -19,7 +19,7 @@ public class Utils {
         return instance;
     }
 
-    public String getClassString(String packageQualifiedClass) {
+    public String getClassNameString(String packageQualifiedClass) {
         return packageQualifiedClass.substring(packageQualifiedClass.lastIndexOf('.') + 1);
     }
 }

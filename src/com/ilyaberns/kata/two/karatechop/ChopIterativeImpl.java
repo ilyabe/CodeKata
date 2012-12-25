@@ -1,6 +1,7 @@
 package com.ilyaberns.kata.two.karatechop;
 
 import com.ilyaberns.constants.Constants;
+import com.ilyaberns.utils.Utils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -59,6 +60,6 @@ public class ChopIterativeImpl implements Chop {
     }
 
     public String toString() {
-        return "ChopIterativeImpl";
+        return Utils.getInstance().getClassNameString(getClass().toString());
     }
 }
