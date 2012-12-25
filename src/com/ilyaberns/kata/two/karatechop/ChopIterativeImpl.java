@@ -1,6 +1,7 @@
 package com.ilyaberns.kata.two.karatechop;
 
 import com.ilyaberns.constants.Constants;
+import com.ilyaberns.kata.two.karatechop.utils.KarateChopUtils;
 import com.ilyaberns.utils.Utils;
 
 /**
@@ -32,7 +33,7 @@ public class ChopIterativeImpl implements Chop {
         // Continue searching while [minIndex,maxIndex] is not empty
         while (maxIndex >= minIndex) {
             // Calculate the midpoint for roughly equal partition
-            int midPoint = calculateMidpoint(minIndex, maxIndex);
+            int midPoint = KarateChopUtils.calculateMidpoint(minIndex, maxIndex);
             // Determine which subarray to search
             if (sortedArrayOfInt[midPoint] < searchTarget) {
                 // Change min index to search upper subarray
@@ -47,16 +48,6 @@ public class ChopIterativeImpl implements Chop {
         }
 
         return Constants.NOT_FOUND;
-    }
-
-    /**
-     * Calculates the rough mid point between two indexes
-     * @param min int starting point
-     * @param max int ending point
-     * @return int mid point
-     */
-    private int calculateMidpoint(int min, int max) {
-        return min + ((max - min) / 2);
     }
 
     public String toString() {
