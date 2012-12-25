@@ -50,7 +50,7 @@ public class ChopIterativeImpl implements Chop {
     }
 
     /**
-     * Calculates the rough mid point between to indexes
+     * Calculates the rough mid point between two indexes
      * @param min int starting point
      * @param max int ending point
      * @return int mid point

@@ -5,6 +5,9 @@ package com.ilyaberns.utils;
  * User: ilya
  * Date: 12/25/12
  * Time: 12:26 AM
+ *
+ * Putting common utility methods here. It probably doesn't need to be implemented as a Singleton, just playing around
+ * with the pattern.
  */
 public class Utils {
 
