@@ -18,11 +18,16 @@ public class ChopFactory {
         return new ChopRecursiveImpl();
     }
 
+    public static Chop makeDeferredDetectionOfEqualityChop() {
+        return new ChopDeferredDetectionOfEqualityImpl();
+    }
+
     public static ArrayList<Chop> makeAllChops() {
         ArrayList<Chop> allChops = new ArrayList<Chop>();
 
         allChops.add(ChopFactory.makeIterativeChop());
         allChops.add(ChopFactory.makeRecursiveChop());
+        allChops.add(makeDeferredDetectionOfEqualityChop());
 
         return allChops;
     }
