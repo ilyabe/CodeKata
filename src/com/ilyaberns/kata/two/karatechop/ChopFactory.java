@@ -25,8 +25,8 @@ public class ChopFactory {
     public static ArrayList<Chop> makeAllChops() {
         ArrayList<Chop> allChops = new ArrayList<Chop>();
 
-        allChops.add(ChopFactory.makeIterativeChop());
-        allChops.add(ChopFactory.makeRecursiveChop());
+        allChops.add(makeIterativeChop());
+        allChops.add(makeRecursiveChop());
         allChops.add(makeDeferredDetectionOfEqualityChop());
 
         return allChops;
