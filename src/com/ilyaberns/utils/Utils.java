@@ -28,7 +28,7 @@ public class Utils {
      * @param packageQualifiedClass String package qualified class name
      * @return String class name without package qualifier
      */
-    public String getClassNameString(String packageQualifiedClass) {
+    public String getClassName(String packageQualifiedClass) {
         return packageQualifiedClass.substring(packageQualifiedClass.lastIndexOf('.') + 1);
     }
 }
