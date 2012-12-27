@@ -56,6 +56,6 @@ public class ChopRecursiveImpl implements Chop {
     }
 
     public String toString() {
-         return Utils.getInstance().getClassNameString(getClass().toString());
+         return Utils.getInstance().getClassName(getClass().toString());
     }
 }

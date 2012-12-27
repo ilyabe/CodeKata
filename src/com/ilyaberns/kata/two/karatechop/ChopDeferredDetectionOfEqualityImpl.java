@@ -14,9 +14,25 @@ import com.ilyaberns.utils.Utils;
  * http://en.wikipedia.org/wiki/Binary_search_algorithm#Deferred_detection_of_equality
  *
  * The difference is the equality check is moved out of the iteration since it only needs to be made rarely,
+ *
+ * 1. Errors encountered:
+ *      - None
+ * 2. Merits:
+ *      - Simpler to code, although a little more difficult to understand the algorithm at first
+ *      - More modular since I can refactor the equality test out
+ *      - Goes with above, but code is simpler with only two branches in search reduction
  */
 public class ChopDeferredDetectionOfEqualityImpl implements Chop {
 
+    /**
+     * Deferred detection of equality binary search finds the searchTarget in the sortedArrayOfInt
+     *
+     * @param searchTarget int to find
+     * @param sortedArrayOfInt int array to search
+     * @param minIndex int lower bound to search
+     * @param maxIndex int upper bound to search
+     * @return int index of the searchTarget or -1 if not found
+     */
     public int chop(int searchTarget, int[] sortedArrayOfInt, int minIndex, int maxIndex) {
 
         // Return not found for empty arrays
@@ -24,11 +40,11 @@ public class ChopDeferredDetectionOfEqualityImpl implements Chop {
             return Constants.NOT_FOUND;
 
         // continually narrow search until just one element remains
-        while(minIndex < maxIndex) {
+        while (minIndex < maxIndex) {
             int midpoint = KarateChopUtils.calculateMidpoint(minIndex, maxIndex);
 
             // code must guarantee the interval is reduced at each iteration
-            assert(minIndex < maxIndex);
+            assert(midpoint < maxIndex);
             // note: 0 <= minIndex < maxIndex implies minIndex will always be less than maxIndex
 
             // reduce the search
@@ -52,6 +68,6 @@ public class ChopDeferredDetectionOfEqualityImpl implements Chop {
     }
 
     public String toString() {
-        return Utils.getInstance().getClassNameString(getClass().toString());
+        return Utils.getInstance().getClassName(getClass().toString());
     }
 }
